@@ -1,4 +1,4 @@
 #!/bin/sh
 
 cd ..
-ln -sv dot-files/.[a-z]* .
+ln -sv dot-files/.[a-f,h-z]* dot-files/.gitconfig .
