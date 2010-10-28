@@ -15,5 +15,33 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
 
+# fun stuff
+alias less='less -R'
+alias more='more -R'
+
+# use colordiff if available
+which colordiff > /dev/null 2>&1
+if [ $? -eq 0 ]; then
+  alias diff='colordiff'
+else
+  if [ -x ~/bin/colordiff ]; then
+    alias diff='colordiff'
+  fi
+fi
+
 # set a fancy prompt
-PS1='\[\e[1;10m\]\u\[\e[1;36m\]@\[\e[1;32m\]\h\[\e[1;30m\]:\[\e[0;37m\]\w\[\e[0;37m\]$ '
+makeprompt() {
+  local underline=$(tput sgr 0 1)
+  local bold=$(tput bold)
+  local red=$(tput setaf 1)
+  local green=$(tput setaf 2)
+  local yellow=$(tput setaf 3)
+  local blue=$(tput setaf 4)
+  local purple=$(tput setaf 5)
+  local cyan=$(tput setaf 6)
+  local white=$(tput setaf 7)
+  local reset=$(tput sgr0)
+  PS1="\[$bold\]\[$green\]\u\[$reset\]@\[$bold\]\[$cyan\]\h\[$reset\]:\[$bold\]\[$blue\]\w\[$reset\]\$ "
+}
+
+makeprompt
