@@ -41,7 +41,7 @@ makeprompt() {
   local cyan=$(tput setaf 6)
   local white=$(tput setaf 7)
   local reset=$(tput sgr0)
-  PS1="\[$bold\]\[$green\]\u\[$reset\]@\[$bold\]\[$cyan\]\h\[$reset\]:\[$bold\]\[$blue\]\w\[$reset\]\$ "
+  PS1="\[$bold\]\[$green\]\u\[$reset\]@\[$bold\]\[$cyan\]\h\[$reset\]:\[$bold\]\[$blue\]\W\[$reset\]\$ "
 }
 
 makeprompt
