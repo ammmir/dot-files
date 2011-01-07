@@ -1,6 +1,6 @@
-#[user]
-#	name = nnnn
-#	email = eeee
+[user]
+	name = Amir Malik
+	email = a@unoc.net
 
 [color]
 ui = auto
@@ -25,3 +25,5 @@ ui = auto
   whitespace = red reverse
 [core]
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+[github]
+	user = ammmir
