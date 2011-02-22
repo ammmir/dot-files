@@ -16,6 +16,7 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 # fun stuff
+alias vi='vim -p'
 alias less='less -R'
 alias more='more -R'
 
@@ -45,3 +46,20 @@ makeprompt() {
 }
 
 makeprompt
+
+#_compssh() {
+#  cur=${COMP_WORDS[COMP_CWORD]};
+#  COMPREPLY=($(compgen -W "$(sed -e 's/ .*$//;s/,.*//' ${HOME}/.ssh/known_hosts)" -- $cur))
+#}
+
+#complete -F _compssh ssh
+#complete -F _compssh scp
+#complete -F _compssh sftp
+
+# Use bash-completion, if available
+if [ -f /etc/bash_completion ]; then
+  . /etc/bash_completion
+fi
+
+# z
+. ~/dot-files/z.sh
