@@ -38,3 +38,5 @@ autocmd BufReadPost *
 \ endif |
 \ endif
 
+set guifont=Fixedsys\ Excelsior\ 3.01:h16
+colorscheme railscasts
