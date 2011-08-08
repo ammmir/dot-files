@@ -39,4 +39,5 @@ autocmd BufReadPost *
 \ endif
 
 set guifont=Fixedsys\ Excelsior\ 3.01:h16
+set go-=T  " hide toolbar
 colorscheme railscasts
