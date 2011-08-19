@@ -38,6 +38,11 @@ autocmd BufReadPost *
 \ endif |
 \ endif
 
-set guifont=Fixedsys\ Excelsior\ 3.01:h16
-set go-=T  " hide toolbar
-colorscheme railscasts
+if has("gui_running")
+  set guifont=Fixedsys\ Excelsior\ 3.01:h16
+  set go-=T  " hide toolbar
+  colorscheme railscasts
+  set transparency=5
+else
+  colorscheme desert
+endif
