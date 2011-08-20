@@ -3,8 +3,9 @@ set shiftwidth=2
 set tabstop=2
 " set shell=/bin/bash
 set title
-" set backupdir=~/.backup
-" set directory=.,~/.backup,/tmp
+set backup
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
 set background=dark
 set showmatch
 set incsearch
