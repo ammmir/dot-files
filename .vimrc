@@ -29,6 +29,7 @@ set history=100         " keep 100 lines of history
 set ruler               " show the cursor position
 syntax on               " syntax highlighting
 set hlsearch            " highlight the last searched term
+nnoremap \ :noh<return> " turn off highlight with backspace
 filetype plugin on      " use the file type plugins
 
 " When editing a file, always jump to the last cursor position
