@@ -44,6 +44,7 @@ if has("gui_running")
   set go-=T  " hide toolbar
   colorscheme railscasts
   set transparency=5
+  set lines=40
 else
   colorscheme desert
 endif
