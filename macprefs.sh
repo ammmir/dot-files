@@ -4,6 +4,28 @@
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 sudo defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
+# show path bar in Finder
+defaults write com.apple.finder ShowPathbar -bool true
+
+# show battery time as percentage only
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+defaults write com.apple.menuextra.battery ShowTime -string "NO"
+
+# expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
+# display full path in Finder window title
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
+# show Debug menu in Safari
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+
+# disable Ping in iTunes
+defaults write com.apple.iTunes disablePingSidebar -bool true
+defaults write com.apple.iTunes disablePing -bool true
+
+# more goodies at https://github.com/mathiasbynens/dotfiles/blob/master/.osx
+
 # enable noatime on root file system
 cat <<_EOF > /tmp/net.unoc.noatime.plist
 <?xml version="1.0" encoding="UTF-8"?>
