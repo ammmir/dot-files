@@ -55,3 +55,6 @@ sudo mount -vuwo noatime /
 
 # don't create /var/vm/sleepimage on every sleep (revert to classic sleep)
 sudo pmset -a hibernatemode 0
+
+# wipe FileVault key prior to suspending (unsure if this is used with above)
+sudo pmset -a destroyfvkeyonstandby 1
