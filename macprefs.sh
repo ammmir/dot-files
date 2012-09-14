@@ -58,3 +58,6 @@ sudo pmset -a hibernatemode 0
 
 # wipe FileVault key prior to suspending (unsure if this is used with above)
 sudo pmset -a destroyfvkeyonstandby 1
+
+# lock keychain on sleep and set timeout to 30 minutes
+security set-keychain-settings -lut 1800
