@@ -61,3 +61,7 @@ sudo pmset -a destroyfvkeyonstandby 1
 
 # lock keychain on sleep and set timeout to 2 hours
 security set-keychain-settings -lut 7200
+
+# don't clutter up the Desktop with screenshots
+mkdir -p ~/Pictures/Screenshots
+defaults write com.apple.screencapture location ~/Pictures/Screenshots/
