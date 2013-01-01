@@ -65,3 +65,6 @@ security set-keychain-settings -lut 7200
 # don't clutter up the Desktop with screenshots
 mkdir -p ~/Pictures/Screenshots
 defaults write com.apple.screencapture location ~/Pictures/Screenshots/
+
+# Xcode color scheme
+defaults write com.apple.dt.Xcode DVTFontAndColorCurrentTheme "Tomorrow Night.dvtcolortheme"
