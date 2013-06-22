@@ -43,11 +43,13 @@ makeprompt() {
   local white=$(tput setaf 7)
   local reset=$(tput sgr0)
 
+  local sign="$(if [[ ${EUID} == 0 ]]; then echo '#'; else echo '$'; fi)"
+
   if [[ $OSTYPE = *darwin* ]]
   then
-    PS1="\[$bold\]\[$green\]\u\[$reset\]@\[$bold\]\[$cyan\]\h\[$reset\]:\[$bold\]\[$blue\]\W\[$reset\]\$ "
+    PS1="\[$bold\]\[$green\]\u\[$reset\]@\[$bold\]\[$cyan\]\h\[$reset\]:\[$bold\]\[$blue\]\W\[$reset\]${sign} "
   else
-    PS1="\[\e[1;10m\]\u\[\e[1;36m\]@\[\e[1;32m\]\h\[\e[1;30m\]:\[\e[0;37m\]\w\[\e[0;37m\]$ "
+    PS1="\[\e[1;10m\]\u\[\e[1;36m\]@\[\e[1;32m\]\h\[\e[1;30m\]:\[\e[0;37m\]\w\[\e[0;37m\]${sign} "
   fi
 }
 
