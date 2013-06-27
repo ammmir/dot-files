@@ -49,7 +49,7 @@ makeprompt() {
     local pathcolor="$red"
     local pathtype="\\w"
   else
-    local usercolor="\[\e[1;10m\]"
+    local usercolor="$white"
     local pathcolor="$cyan"
     local pathtype="\\W"
   fi
