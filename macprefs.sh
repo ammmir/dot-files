@@ -13,6 +13,7 @@ defaults write com.apple.menuextra.battery ShowTime -string "NO"
 
 # expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 # display full path in Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
