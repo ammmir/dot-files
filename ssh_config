@@ -3,3 +3,5 @@ ControlMaster auto
 ControlPath ~/.ssh/sockets/%r@%h-%p
 ControlPersist 300
 VisualHostKey yes
+ServerAliveInterval 60
+ServerAliveCountMax 5
