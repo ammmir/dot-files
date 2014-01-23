@@ -60,8 +60,16 @@ sudo pmset -a hibernatemode 0
 # wipe FileVault key prior to suspending (unsure if this is used with above)
 sudo pmset -a destroyfvkeyonstandby 1
 
-# lock keychain on sleep and set timeout to 2 hours
-security set-keychain-settings -lut 7200
+# lock keychain on sleep (portables only) and set timeout to 2 hours
+if [[ `sysctl -b hw.model` == *MacBook* ]]
+then
+  security set-keychain-settings -lut 7200
+else
+  security set-keychain-settings -ut 7200
+fi
+
+# new Finder windows should open with home directory
+defaults write com.apple.Finder NewWindowTargetPath -string "file://${HOME}/"
 
 # don't clutter up the Desktop with screenshots
 mkdir -p ~/Pictures/Screenshots
