@@ -16,6 +16,7 @@ colorscheme desert
 
 set smartindent
 set number
+set nofoldenable
 
 filetype plugin indent on
 autocmd FileType python set complete+=k~/.vim/syntax/python.vim isk+=.,(
