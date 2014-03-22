@@ -33,6 +33,8 @@ set hlsearch            " highlight the last searched term
 nnoremap \ :noh<return> " turn off highlight with backspace
 filetype plugin on      " use the file type plugins
 
+execute pathogen#infect()
+
 " When editing a file, always jump to the last cursor position
 autocmd BufReadPost *
 \ if ! exists("g:leave_my_cursor_position_alone") |
