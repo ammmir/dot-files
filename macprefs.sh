@@ -65,7 +65,7 @@ if [[ `sysctl -b hw.model` == *MacBook* ]]
 then
   security set-keychain-settings -lut 7200
 else
-  security set-keychain-settings -ut 7200
+  security set-keychain-settings -l
 fi
 
 # new Finder windows should open with home directory
