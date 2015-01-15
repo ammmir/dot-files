@@ -3,6 +3,7 @@
 cd ..
 ln -sv dot-files/.[a-f,h-z]* dot-files/.gitconfig dot-files/.gitignore .
 
+mkdir -p ~/Library/Developer/Xcode/UserData
 cd ~/Library/Developer/Xcode/UserData && ln -sv ../../../../dot-files/Library/Developer/Xcode/UserData/FontAndColorThemes .
 
 mkdir -p ~/.ssh/sockets
