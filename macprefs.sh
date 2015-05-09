@@ -18,6 +18,9 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 # display full path in Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
+# search current directory in Finder by default
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
 # show Debug menu in Safari
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
@@ -70,6 +73,12 @@ fi
 
 # new Finder windows should open with home directory
 defaults write com.apple.Finder NewWindowTargetPath -string "file://${HOME}/"
+
+# increase keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 2
+
+# shorten initial keyboard repeat delay
+defaults write NSGlobalDomain InitialKeyRepeat -int 25
 
 # don't clutter up the Desktop with screenshots
 mkdir -p ~/Pictures/Screenshots
