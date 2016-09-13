@@ -27,5 +27,6 @@ ui = auto
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	quotepath = false
 	excludesfile = ~/.gitignore
+	editor = /usr/bin/vim
 [github]
 	user = ammmir
