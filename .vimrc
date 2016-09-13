@@ -52,3 +52,6 @@ if has("gui_running")
 else
   colorscheme desert
 endif
+
+set mouse=a
+set laststatus=2
