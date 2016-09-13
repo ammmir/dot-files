@@ -25,4 +25,16 @@ if [ -f "${HOME}/.gpg-agent-info" ]; then
   export SSH_AGENT_PID
 fi
 
-. "${HOME}/dot-files/gpg-agent-startup"
+#. "${HOME}/dot-files/gpg-agent-startup"
+
+# update SSH agent socket inside tmux sessions
+update_ssh_agent_sock () {
+  if ((SECONDS/120 > __last_sock_update)); then
+    ((__last_sock_update = SECONDS/120))
+    eval $(tmux show-env | grep '^SSH_AUTH_SOCK')
+  fi
+}
+
+if { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
+  PROMPT_COMMAND="update_ssh_agent_sock; $PROMPT_COMMAND"
+fi
