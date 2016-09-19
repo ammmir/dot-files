@@ -16,6 +16,8 @@ if [ "$PS1" ]; then
 
 fi
 
+export LSCOLORS=Exfxcxdxbxegedabagacad
+
 source ~/.bash_aliases
 
 if [ -f "${HOME}/.gpg-agent-info" ]; then
