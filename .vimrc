@@ -9,7 +9,6 @@ set directory=~/.vim/tmp
 set background=dark
 set showmatch
 set incsearch
-colorscheme desert
 "set cindent
 
 "set bs=2 " fix backspace
@@ -50,7 +49,7 @@ if has("gui_running")
   set transparency=5
   set lines=40
 else
-  colorscheme desert
+  colorscheme monokai
 endif
 
 set mouse=a

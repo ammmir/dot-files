@@ -6,7 +6,7 @@
 Session.vim
 
 ## Linux
-.*
+#.*
 !.gitignore
 *~
 
