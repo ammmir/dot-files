@@ -83,3 +83,6 @@ defaults write com.apple.screencapture location ~/Pictures/Screenshots/
 
 # Xcode color scheme
 defaults write com.apple.dt.Xcode DVTFontAndColorCurrentTheme "Tomorrow Night.dvtcolortheme"
+
+# firmware password
+sudo firmwarepasswd -setpasswd -setmode full
