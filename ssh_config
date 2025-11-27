@@ -1,7 +1,0 @@
-Host *
-ControlMaster auto
-ControlPath ~/.ssh/sockets/%C
-ControlPersist 300
-VisualHostKey yes
-ServerAliveInterval 60
-ServerAliveCountMax 5
