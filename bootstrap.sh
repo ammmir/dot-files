@@ -61,6 +61,7 @@ brew "dockutil"
 brew "bun"
 brew "starship"
 brew "zsh-autosuggestions"
+brew "nvim"
 
 cask "iterm2"
 cask "cursor"
@@ -262,6 +263,29 @@ apply_zsh() {
   fi
 }
 
+apply_nvim() {
+  [ -d "./.config/nvim" ] || return 0
+  [ ! -d "$HOME/.config/nvim" ] || return 0
+
+  git clone https://github.com/NvChad/starter ~/.config/nvim
+
+  echo ">>> Syncing nvim config..."
+
+  find "./.config/nvim" -type f | while read -r src; do
+    rel="${src#./.config/nvim/}"
+    dst="$HOME/.config/nvim/$rel"
+
+    mkdir -p "$(dirname "$dst")"
+
+    if [ ! -e "$dst" ]; then
+      echo ">>> Linking $rel"
+      ln -s "$src" "$dst"
+    else
+      echo ">>> Skipping existing: $rel"
+    fi
+  done
+}
+
 main() {
   echo ">>> Starting macOS bootstrap..."
 
@@ -273,6 +297,7 @@ main() {
   apply_brewfile
   apply_macos_defaults
   apply_zsh
+  apply_nvim
 
   echo ">>> Bootstrap complete. Some settings may need a logout/reboot to fully apply."
 }
