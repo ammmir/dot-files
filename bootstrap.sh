@@ -256,7 +256,9 @@ apply_macos_defaults() {
 apply_zsh() {
   mkdir -p ~/.config
 
-  grep -qxF 'eval "$(starship init zsh)"' ~/.zshrc || echo 'eval "$(starship init zsh)"' >> ~/.zshrc
+  if [ ! -e "$HOME/.zshrc" ]; then
+    ln -s "$(pwd)/.zshrc" "$HOME/.zshrc"
+  fi
 
   if [ ! -f "$HOME/.config/starship.toml" ]; then
     starship preset catppuccin-powerline -o ~/.config/starship.toml
