@@ -53,14 +53,13 @@ apply_brewfile() {
   echo ">>> Writing embedded Brewfile to $BOOTSTRAP_BREWFILE..."
 
   cat > "$BOOTSTRAP_BREWFILE" <<'EOF'
-tap "oven-sh/bun"
-
 brew "fzf"
 brew "ripgrep"
 brew "htop"
 brew "tree"
 brew "dockutil"
-brew "bun"
+brew "oven-sh/bun/bun"
+brew "asdf"
 brew "starship"
 brew "zsh-autosuggestions"
 brew "nvim"
