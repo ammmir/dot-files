@@ -41,8 +41,7 @@ ensure_homebrew() {
 
 ensure_zsh() {
   if [ ! -d "$HOME/.oh-my-zsh" ]; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    zstyle ':omz:update' mode disabled
+    RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   fi
 }
 
