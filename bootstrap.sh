@@ -64,9 +64,9 @@ brew "zsh-autosuggestions"
 brew "nvim"
 
 cask "iterm2"
-cask "cursor"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-meslo-lg-nerd-font"
+cask "alt-tab"
 EOF
 
   echo ">>> Applying Brewfile with brew bundle..."

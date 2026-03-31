@@ -109,5 +109,8 @@ alias vi='nvim'
 unsetopt AUTO_CD
 setopt INTERACTIVE_COMMENTS
 
+unsetopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
+
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(starship init zsh)"
