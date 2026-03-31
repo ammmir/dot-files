@@ -13,6 +13,8 @@ ensure_permissions() {
   # trigger Full Disk Access
   ls -al ~/Documents ~/Downloads ~/Library/Photos > /dev/null 2>&1
   open "x-apple.systempreferences:com.apple.preference.security?Privacy_FullDiskAccess"
+  echo ">>> Grant Full Disk Access to your terminal app, then press RETURN to continue."
+  read -r
 }
 
 ensure_xcode_cli() {
