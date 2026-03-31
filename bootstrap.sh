@@ -126,6 +126,7 @@ apply_macos_defaults() {
   defaults write com.apple.finder _FXShowPosixPathInTitle -bool false
   defaults write com.apple.finder NewWindowTarget -string "PfHm"
   defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+  defaults write com.apple.finder ShowRecentTags -bool false
 
   ########################################################################
   # Global (NSGlobalDomain)
