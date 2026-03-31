@@ -244,6 +244,7 @@ apply_macos_defaults() {
   ########################################################################
 
   defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$ITERM2_SETTINGS_URL"
+  defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
   ########################################################################
   # Restart affected services
